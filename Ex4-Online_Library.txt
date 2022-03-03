@@ -1,0 +1,69 @@
+package com.company;
+
+import java.util.Arrays;
+import java.util.Scanner;
+class Library {
+    String addBook;
+    String returnBook;
+    String availBook;
+
+    public void getAddBook() {
+        System.out.println("Enter the book you want to add in our online library ");
+        Scanner sc1 = new Scanner(System.in);
+        String a = sc1.nextLine();
+        addBook = a;
+        System.out.println("Your book " + a + " has been added to our Online Library!!");
+    }
+
+    public void getReturnBook() {
+        System.out.println("Enter the book you want return");
+        Scanner sc2 = new Scanner(System.in);
+        String b = sc2.nextLine();
+        returnBook = b;
+        System.out.println("Your book " + b + " has been returned , Feel free to issue it back!");
+    }
+
+    public void getAvailBook() {
+        Scanner sc3 = new Scanner(System.in);
+        String c = sc3.nextLine();
+        availBook = c;
+        System.out.println("Your book " + c + " has been issued");
+    }
+
+    String[] sab = {"book6", "book7", "book8", "book9", "book10"};
+
+    public void getSab() {
+         System.out.println("You can choose from the choices available below");
+        System.out.println(Arrays.toString(sab));
+    }
+
+    public void getIssuedBooks() {
+        System.out.println(" The issued books in our Library at present  are : ");
+    }
+
+    String[] sib = {"book1", "book2", "book3", "book4", "book5"};
+
+    public void getSib() {
+        System.out.println(Arrays.toString(sib));
+    }
+}
+public class CWH_51_Ex4_Library {
+    public static void main(String[] args) {
+        /* you have to implement using java class library
+         methods : addBook , issueBook , returnBook , showAvailableBooks
+         properties : array to store the available books , array to store the issued books
+        */
+        System.out.println("~~~~~~~~ ONLINE LIBRARY ~~~~~~~~ ");
+        System.out.println("This library allows you to add your book , issue book , return the issued book and show Available books");
+        Library obj1 = new Library();
+        obj1.getAddBook();
+        obj1.getReturnBook();
+        obj1.getIssuedBooks();
+        obj1.getSib();
+        obj1.getSab();
+        obj1.getAvailBook();
+        System.out.println("Thankyou for using Online Library , Please visit again ;) ");
+
+
+    }
+}

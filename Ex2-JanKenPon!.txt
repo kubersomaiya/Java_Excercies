@@ -1,0 +1,86 @@
+package com.company;
+import java.util.Scanner;
+import java.util.Random;
+public class CWH_20_Ex2_rock_paper_scissors {
+    public static void main(String[] args) {
+        System.out.println("************** WELCOME TO JanKenPon! ************** ");
+        System.out.println("JanKenPon! is literally translated to Rock , Paper , Scissors. ");
+        System.out.println("This game is played worldwide and we decided to make a computer V/S version of it");
+        System.out.println("You can now play JanKenPon! ");
+        System.out.println("You V/S Computer");
+        System.out.println("Press X for Rules");
+        Scanner sc = new Scanner(System.in);
+        String rule = sc.nextLine();
+        System.out.println("Rules for this game are:");
+        System.out.println("The objects here from which the game can be played is Rock , Paper & Scissors");
+        System.out.println("You have to use 0 , 1 , 2 for Rock , Paper & Scissors respectively");
+        System.out.println("Please enter your choice:");
+        Scanner sc1 = new Scanner(System.in);
+        int your = sc1.nextInt();
+           int a=0;
+           int b=1;
+           int c=2;
+            if(your==a){
+                System.out.println("Your choice is : Rock");
+            }
+            else if(your==b){
+                System.out.println("Your choice is : Paper");
+            }
+            else if(your==c){
+                System.out.println("Your choice is : Scissors");
+            }
+            Random rand = new Random();
+            int comp = 2;
+            int int_random = rand.nextInt(comp);
+
+            System.out.println("Computer's choice is :" + int_random); ;
+         int x= 0;
+        int y= 1;
+        int z= 2;
+            if(int_random==x){
+            System.out.println("Computer's choice is rock");
+         }
+            else if(int_random==y){
+            System.out.println("Computer's choice is paper");
+         }
+            else if(int_random==z){
+            System.out.println("Computer's choice is scissors");
+            }
+
+            /*boolean p=a==0 && x==0;
+            boolean q=b==1 && y==1;
+            boolean r=c==2 && z==2;*/
+
+           if(your==0 && int_random==0){
+               System.out.println("Since you both chose ROCK . Its a TIE!");
+           }
+           else if(your==1 && int_random==1){
+               System.out.println("Since you both chose PAPER . Its a TIE!");
+           }
+           else if(your==2 && int_random==2){
+               System.out.println("Since you both chose SCISSORS . Its a TIE!");
+           }
+           else if(your==0 && int_random==1){
+               System.out.println("Sad Life Bro , COMPUTER wins");
+           }
+           else if(your==0 && int_random==2){
+               System.out.println("CONGRATULATIONS!!! , You won");
+           }
+           else if(your==1 && int_random==0){
+               System.out.println("CONGRATULATIONS!!! , You won");
+           }
+           else if(your==1 && int_random==2){
+               System.out.println("Sad Life Bro , COMPUTER wins");
+           }
+           else if(your==2 && int_random==1){
+               System.out.println("CONGRATULATIONS!!! , You won");
+           }
+           else if(your==2 && int_random==0){
+               System.out.println("Sad Life Bro , COMPUTER wins");
+           }
+        System.out.println("Thankyou for Playing with us");
+
+
+
+    }
+}

@@ -1,0 +1,126 @@
+package com.exercise;
+
+import java.util.Scanner;
+
+class vector {
+    Scanner sc = new Scanner(System.in);
+    int x1,y1,z1,x2,y2,z2;
+    public void add(){
+        System.out.println("Enter Coefficients of Vector 1 : ");
+        x1=sc.nextInt();
+        y1=sc.nextInt();
+        z1=sc.nextInt();
+        System.out.println("Enter Coefficients of Vector 2 : ");
+        x2=sc.nextInt();
+        y2=sc.nextInt();
+        z2=sc.nextInt();
+        int x3 = x1+x2;
+        int y3 = y1+y2;
+        int z3 = z1+z2;
+        System.out.print("Vector 1 is : ");
+        System.out.printf("%di + %dj + %dk ",x1,y1,z1 );
+        System.out.println();
+        System.out.print("Vector 2 is : ");
+        System.out.printf("%di + %dj + %dk ",x2,y2,z2);
+        System.out.println();
+        System.out.print("Result of Vector Addition is : ");
+        System.out.printf("%di + %dj + %dk ",x3,y3,z3);
+        System.out.println();
+    }
+    public void sub(){
+        System.out.println("Enter Coefficients of Vector 1 : ");
+        x1=sc.nextInt();
+        y1=sc.nextInt();
+        z1=sc.nextInt();
+        System.out.println("Enter Coefficients of Vector 2 : ");
+        x2=sc.nextInt();
+        y2=sc.nextInt();
+        z2=sc.nextInt();
+        int x3 = x1-x2;
+        int y3 = y1-y2;
+        int z3 = z1-z2;
+        System.out.print("Vector 1 is : ");
+        System.out.printf("%di + %dj + %dk ",x1,y1,z1);
+        System.out.println();
+        System.out.print("Vector 2 is : ");
+        System.out.printf("%di + %dj + %dk ",x2,y2,z2);
+        System.out.println();
+        System.out.print("Result of Vector Subtraction is : ");
+        System.out.printf("%di + %dj + %dk ",x3,y3,z3);
+        System.out.println();
+    }
+    public void dot(){
+        System.out.println("Enter Coefficients of Vector 1 : ");
+        x1=sc.nextInt();
+        y1=sc.nextInt();
+        z1=sc.nextInt();
+        System.out.println("Enter Coefficients of Vector 2 : ");
+        x2=sc.nextInt();
+        y2=sc.nextInt();
+        z2=sc.nextInt();
+        int x3 = x1*x2;
+        int y3 = y1*y2;
+        int z3 = z1*z2;
+        System.out.print("Vector 1 is : ");
+        System.out.printf("%di + %dj + %dk ",x1,y1,z1);
+        System.out.println();
+        System.out.print("Vector 2 is : ");
+        System.out.printf("%di + %dj + %dk ",x2,y2,z2);
+        System.out.println();
+        System.out.print("Dot Product is : ");
+        System.out.printf("%di + %dj + %dk ",x3,y3,z3);
+        System.out.println();
+    }
+    public void cross(){
+        System.out.println("Enter Coefficients of Vector 1 : ");
+        x1=sc.nextInt();
+        y1=sc.nextInt();
+        z1=sc.nextInt();
+        System.out.println("Enter Coefficients of  Vector 2 : ");
+        x2=sc.nextInt();
+        y2=sc.nextInt();
+        z2=sc.nextInt();
+        int x3 = y1*z2-z1*y2;
+        int y3 = -(x1*z2-z1*x2);
+        int z3 = x1*y2-x2*y1;
+        System.out.print("Vector 1 is : ");
+        System.out.printf("%di + %dj + %dk ",x1,y1,z1);
+        System.out.println();
+        System.out.print("Vector 2 is : ");
+        System.out.printf("%di + %dj + %dk ",x2,y2,z2);
+        System.out.println();
+        System.out.print("Cross Product is : ");
+        System.out.printf("%di + %dj + %dk ",x3,y3,z3);
+        System.out.println();
+    }
+}
+
+public class Tanmai_Vector {
+    public static void main(String[] args) {
+        System.out.println("***** WELCOME TO TANMAI'S VECTOR OPERATIONS *****");
+        System.out.println("You can choose form the options below what do you want to do ");
+        System.out.println("The options are : ");
+            System.out.println(" 1.  Vector Addition   \n 2.  Vector Subtraction   \n 3.  Dot Product \n 4.  Cross Product\n ");
+            System.out.println("Enter the method you want to use");
+            System.out.println("Please enter number corresponding to the method for your convenience!!!");
+            Scanner user = new Scanner(System.in);
+            int input = user.nextInt();
+        vector obj1 = new vector();
+            if(input==1){
+                obj1.add();
+            }
+            else if(input==2){
+                obj1.sub();
+            }
+            else if(input==3){
+                obj1.dot();
+            }
+           else if(input==4){
+                obj1.cross();
+            }else {
+                System.out.println("Error Occurred , Please Run the Code Again ! ");
+            }
+        System.out.println("Thank You !");
+
+    }
+}
